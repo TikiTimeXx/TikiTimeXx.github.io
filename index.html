@@ -1,32 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Art Calculator</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<h1>Art Calculator</h1>
-
 <form id="calculator">
-    <label>
-        <input type="checkbox" name="option" value="5">
-        Option 1 (+5)
-    </label><br>
-    <label>
-        <input type="checkbox" name="option" value="10">
-        Option 2 (+10)
-    </label><br>
-    <label>
-        <input type="checkbox" name="option" value="15">
-        Option 3 (+15)
-    </label><br>
+    <fieldset>
+        <legend>Base scores:</legend>
+        <label>
+            <input type="checkbox" name="base-score" value="3">
+            Sketch & Lineart (+3 LP)
+        </label><br>
+        <label>
+            <input type="checkbox" name="base-score" value="5">
+            Flat color (+5 LP)
+        </label><br>
+        <label>
+            <input type="checkbox" name="base-score" value="8">
+            Shaded & Grayscale (+8 LP)
+        </label><br>
+        <label>
+            <input type="checkbox" name="base-score" value="30">
+            3D Works small (+30 LP)
+        </label><br>
+        <label>
+            <input type="checkbox" name="base-score" value="60">
+            3D Works medium (+60 LP)
+        </label><br>
+        <label>
+            <input type="checkbox" name="base-score" value="80">
+            3D Works Large (+80 LP)
+        </label><br>
+        <label>
+            Writing: <input type="number" id="writing-words" min="0" placeholder="Enter word count">
+            <span id="writing-points">LP</span>
+        </label><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Bonuses:</legend>
+        <label>
+            <input type="checkbox" name="bonus" value="2">
+            Portraits & Bust (+2 LP)
+        </label><br>
+        <label>
+            <input type="checkbox" name="bonus" value="4">
+            Fullbody (+4 LP)
+        </label><br>
+        <label>
+            Time: <input type="number" id="time-hours" min="0" placeholder="Enter hours">
+            <span id="time-points">LP</span>
+        </label><br>
+        <label>
+            <input type="checkbox" name="bonus" value="2">
+            Bakgrounds(mini/minimal) (+2 LP)
+        </label><br>
+        <label>
+            <input type="checkbox" name="bonus" value="4">
+            Backgrounds(Vignette/some substance) (+4 LP)
+        </label><br>
+        <label>
+            <input type="checkbox" name="bonus" value="10">
+            Backgrounds(Full/Complex) (+10 LP)
+        </label><br>
+        <label>
+            Animation: <input type="number" id="animation-frames" min="0" placeholder="Enter frames">
+            <span id="animation-points">LP</span>
+        </label><br>
+        <label>
+            Accessory (+1 LP)
+        </label><br>
+        <label>
+            Elemental (+5 LP)
+        </label><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Special additions:</legend>
+        <label>
+            <input type="checkbox" name="special-addition" value="2">
+            First Glance (+2 LP)
+        </label><br>
+        <label>
+            <input type="checkbox" name="special-addition" value="20">
+            Story Prompt (+20 LP)
+        </label><br>
+        <label>
+            Quest & Trials (+15 LP)
+        </label><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Other:</legend>
+        <label>
+            <input type="checkbox" name="other" value="1">
+            Animal companions (+1 LP)
+        </label><br>
+        <label>
+            Bonded human (+5 LP)
+        </label><br>
+        <label>
+            Other humans (+2 LP)
+        </label><br>
+        <label>
+            Other rootlings (+2 LP)
+        </label><br>
+        <label>
+            Rootling interaction (+2 LP)
+        </label><br>
+    </fieldset>
+
     <button type="button" onclick="calculate()">Calculate</button>
+    <p>Total: <span id="total">0</span> LP</p>
 </form>
 
-<p>Total: <span id="total">0</span></p>
-
 <script src="script.js"></script>
-</body>
-</html>
