@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Art Calculator</h1>
+
+<form id="calculator">
+    <label>
+        <input type="checkbox" name="option" value="5">
+        Option 1 (+5)
+    </label><br>
+    <label>
+        <input type="checkbox" name="option" value="10">
+        Option 2 (+10)
+    </label><br>
+    <label>
+        <input type="checkbox" name="option" value="15">
+        Option 3 (+15)
+    </label><br>
+    <button type="button" onclick="calculate()">Calculate</button>
+</form>
+
+<p>Total: <span id="total">0</span></p>
+
+<script src="script.js"></script>
+</body>
+</html>
