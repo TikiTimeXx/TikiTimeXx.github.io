@@ -1,4 +1,6 @@
 function calculate() {
+    console.log("Calculating...");
+
     let total = 0;
 
     // Calculate points for Base scores
@@ -39,6 +41,8 @@ function calculate() {
     const animationFrames = parseInt(document.getElementById('animation-frames').value);
     const animationPointsPerFrame = 2; // 2 LP per frame
     total += animationFrames * animationPointsPerFrame;
+
+    console.log("Total:", total);
 
     // Update the total displayed on the page
     document.getElementById('total').textContent = total;
